@@ -1,0 +1,16 @@
+# Runtime dependencies of tools/eval_cgsr.py and the base-predictor code it imports (upstream ReCLIP++).
+# Versions in comments = the environment that produced the paper-facing results
+# (Python 3.10.19, CUDA 12.8, cuDNN 9.10.2, NVIDIA RTX 5090). Exact pins are not
+# enforced because the PyTorch build used was a nightly; see REPRODUCIBILITY.md.
+torch            # 2.11.0.dev20260214+cu128 (nightly)
+torchvision      # 0.26.0.dev20260214+cu128 (nightly)
+numpy            # 2.2.6
+opencv-python    # 5.0.0.93 (image decoding/resizing is numerics-relevant)
+Pillow           # 12.0.0
+PyYAML           # 6.0.3
+easydict         # 1.13
+ftfy             # 6.3.1
+regex            # 2026.1.15
+tqdm             # 4.67.3
+# OpenAI CLIP, at the commit installed in the paper environment
+clip @ git+https://github.com/openai/CLIP.git@dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1

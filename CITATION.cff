@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below and the ReCLIP++ paper it builds on."
+title: "Context-Guided Selective Rollback for Post-Refinement Verification in CLIP-Based Semantic Segmentation"
+type: software
+authors:
+  # TODO: author names and affiliations are not yet confirmed (the manuscript holds template placeholders).
+  - name: "TODO: author names"
+# TODO: add version, date-released and repository-code once the repository is published.
+# TODO: add the paper reference (venue, year, DOI) only after publication is confirmed.
+keywords:
+  - open-vocabulary semantic segmentation
+  - CLIP
+  - post-refinement verification
+  - selective rollback
+references:
+  - type: article
+    title: "ReCLIP++: Learn to Rectify the Bias of CLIP for Unsupervised Semantic Segmentation"
+    authors:
+      - family-names: Wang
+        given-names: Jingyun
+      - family-names: Kang
+        given-names: Guoliang
+    journal: "International Journal of Computer Vision"
+    volume: 133
+    issue: 11
+    start: 7946
+    end: 7968
+    year: 2025

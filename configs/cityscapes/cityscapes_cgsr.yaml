@@ -1,0 +1,37 @@
+# CGSR paper-facing evaluation config: cityscapes
+# All values equal the frozen run configuration. DATAROOT, TEXT_WEIGHT, LOAD_PATH and
+# SAVE_DIR are placeholders; tools/eval_cgsr.py sets them from --data-root,
+# --text-embedding and --checkpoint. The candidate generator and CGSR have no YAML keys.
+# Base config: the schema and values follow the ReCLIP++ configuration files (Wang & Kang);
+# see THIRD_PARTY_NOTICES.md.
+DATASET:
+  NAME: 'cityscapes'
+  NUM_CLASSES: 19
+  DATAROOT: '/path/to/cityscapes/'
+  SCALE: [2048, 448]
+  RATIO_RANGE: [0.5, 2.0]
+  CROP_SIZE: [512, 512]
+  CAT_MAX_RATIO: 0.75
+  IMG_NORM_CFG:
+    MEAN: [ 122.771, 116.746, 104.094 ]
+    STD: [ 68.501, 66.632, 70.323 ]
+    RGB: True
+  TEXT_WEIGHT: 'weights/text/city_ViT16_clip_text.pth'
+  REDUCE_ZERO_LABEL: False
+  IGNORE_INDEX: 255
+
+
+MODEL:
+  FEATURE_EXTRACTOR: 'vit'
+  TEXT_CHANNEL: 512
+  VISUAL_CHANNEL: 768
+  TRAINING: False
+
+TEST:
+  BATCH_SIZE: 1
+  PD: 0.5
+
+EVAL_METRIC: "miou"
+LOAD_PATH: 'weights/city.pth'
+SAVE_DIR: 'outputs/cityscapes/'
+NUM_WORKERS: 4

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.env.*
+*.egg-info/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Upstream checkout (cloned by scripts/setup_upstream.*; not redistributed)
+third_party/
+
+# Run outputs
+outputs/
+output/
+runs/
+logs/
+*.log
+*.tmp
+*.bak
+
+# Weights and large binaries: never committed (see docs/WEIGHTS.md)
+checkpoints/
+weights/*
+!weights/.gitkeep
+!weights/CHECKSUMS.sha256
+!weights/text/
+weights/text/*
+!weights/text/.gitkeep
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+*.npz
+*.npy
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Candidate generator source is distributed separately (cgsr/candidate/README.md)
+cgsr/candidate/model_sfp_dtlr.py
